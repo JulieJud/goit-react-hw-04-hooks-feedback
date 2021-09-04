@@ -1,6 +1,5 @@
-import React from 'react';
+/*class Feedback extends React.Component {
 
-class Feedback extends React.Component {
   state = {
     good: 0,
     neutral: 0,
@@ -16,7 +15,8 @@ class Feedback extends React.Component {
   };
   handleNeutral = () => {
     this.setState(prevState => {
-      return {
+        return {
+          
         neutral: prevState.neutral + 1,
       };
     });
@@ -28,45 +28,48 @@ class Feedback extends React.Component {
       };
     });
   };
+    
+   
+    render() {
+        const countTotalFeedback = this.state.good + this.state.neutral + this.state.bad;
 
-  render() {
-    const countTotalFeedback =
-      this.state.good + this.state.neutral + this.state.bad;
-
-    const countPositiveFeedbackPercentage = Math.round(
-      (this.state.good * 100) / countTotalFeedback,
-    );
-
+        const countPositiveFeedbackPercentage= Math.round( this.state.good*100/countTotalFeedback)
+        
     return (
       <div>
         <h1>Please leave feedback</h1>
         <div>
-          <button type="button" onClick={this.handleGood}>
+                <button type="button"
+                    onClick={this.handleGood}>
             Good
           </button>
-          <button type="button" onClick={this.handleNeutral}>
+                <button type="button"
+                    onClick={this.handleNeutral}>
             Neutral
           </button>
-          <button type="button" onClick={this.handleBad}>
+                <button type="button"
+                    onClick={this.handleBad}>
             Bad
-          </button>
-        </div>
-        <h2>Statistics</h2>
+                </button>
+                
+            </div>
+            
+            <h2>Statistics</h2>
+            
         <div>
-          <p>Good-{this.state.good}</p>
+                <p>Good-{this.state.good}</p>
+                
+                <p>Neutral-{this.state.neutral}</p>
+                
+                <p>Bad-{this.state.bad}</p>
+                
+                <p>count-{countTotalFeedback}</p>
 
-          <p>Neutral-{this.state.neutral}</p>
-
-          <p>Bad-{this.state.bad}</p>
-
-          <p>count-{countTotalFeedback}</p>
-
-          {this.state.good !== 0 && (
-            <p>positive-{countPositiveFeedbackPercentage}%</p>
-          )}
+                {this.state.good!==0 &&  <p>positive-{countPositiveFeedbackPercentage}%</p>}
+         
+                
         </div>
       </div>
     );
   }
-}
-export default Feedback;
+}*/
