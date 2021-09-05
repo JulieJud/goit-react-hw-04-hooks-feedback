@@ -4,6 +4,7 @@ import Section from './Section/Section.jsx';
 import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
 import FeedbackOptions from './FeedBackOptions/FeedBackOptions';
+import { Title } from '../components/Section/Section.styled';
 
 export default class App extends Component {
   state = {
@@ -36,7 +37,7 @@ export default class App extends Component {
       <Section title="Please leave feedback">
         <FeedbackOptions options={options} updateState={this.updateState} />
 
-        <h3 className="statistics">Statistics</h3>
+        <Title>Statistics</Title>
 
         {this.countTotalFeedback() ? (
           <Statistics
